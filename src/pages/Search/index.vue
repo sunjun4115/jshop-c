@@ -5,6 +5,7 @@
       <p>query:{{this.$route.query.keyword1}}-----------简化---------{{keyword1}}</p>
       <p>111111</p>
       <p>传递过来的参数：{{username}}</p>
+      <p>传递过来的参数：{{username}}</p>
   </div>
 </template>
 
