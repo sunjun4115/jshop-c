@@ -75,7 +75,7 @@
                 // 3、对象写法（重点）
                 this.$router.push({
                   name: "search",
-                  params: { keyword: this.keyword },
+                  params: { keyword: this.keyword || undefined },
                   query: { keyword1: this.keyword.toUpperCase() },
                 });
 
@@ -125,15 +125,23 @@
                 // 实现: props: (route)=>({keyword1:route.params.keyword, keyword2: route.query.keyword })
 
                 // 面试6 ，vue-router使用的是3.1.0以上的版本，如果多次点击使用编程式导航，而参数没发生变化
-                //会报NavigationDuplicated的警告错误
-                //解决1，但是不好
+                //会报NavigationDuplicated的警告错误  
+                // 原因：vue-router3.1.0以后引入了promise语法，如果没有通过参数指定成功或者失败回调函数就会返回一个promise且内部会判断如果要跳转的
+                //      路径和参数都没有变化，会抛出一个失败的promise 
+                //解决1，在跳转时指定成功或失败回调函数，或者catch处理 ，但是不好 因为不能一劳永逸 后面如果用到了push/replace方法 还要写
                 // this.$router.push({
+                //   name: "search",
+                //   params: { keyword: this.keyword || undefined},
+                //   query: { keyword1: this.keyword.toUpperCase() },
+                // },()=>{},()=>{});
+
+                 // this.$router.push({
                 //   name: "search",
                 //   params: { keyword: this.keyword || undefined},
                 //   query: { keyword1: this.keyword.toUpperCase() },
                 // }).catch(() => {});
 
-                //解决2，修改路由器对象，原型的方法
+                //解决2，修改路由器对象，原型的方法 (修改Vue原型上的push/replace方法)
             }
         }
     }
