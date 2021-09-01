@@ -87,6 +87,9 @@ export default new VueRouter({
             return { keyword: route.params.keyword, keyword1: route.query.keyword1, 'username': 'sunjun' }
         }
     }, {
+        path: '/index.html',
+        component: Home
+    }, {
         path: '/',
         redirect: '/home'
     }],

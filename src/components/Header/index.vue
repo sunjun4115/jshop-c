@@ -41,6 +41,7 @@
                     <form action="###" class="searchForm">
                         <input type="text" id="autocomplete" v-model="keyword" class="input-error input-xxlarge" />
                         <button class="sui-btn btn-xlarge btn-danger" type="button" @click="toSerach">搜索</button>
+                        <button class="sui-btn btn-xlarge btn-danger" type="button" @click="tttBtn">tttBtn</button>
                     </form>
                 </div>
             </div>
@@ -49,6 +50,7 @@
 </template>
 
 <script>
+// import axios from 'axios'
     export default {
         name:"Header",
         data(){
@@ -142,9 +144,30 @@
                 // }).catch(() => {});
 
                 //解决2，修改路由器对象，原型的方法 (修改Vue原型上的push/replace方法)
+            },
+            tttBtn(){
+                // axios(
+                //     {
+                //         method: 'get',
+                //         url: 'http://localhost:8080/staticdata/t1.json', //特别注意：json文件存放在public目录下，如/public/staticdata/jsonData.json,那么在请求json数据的时候，地址千万千万千万不能写/public/staticdata/jsonData.json，而是写/staticdata/jsonData.json，否则会报404，因为静态资源在打包后，默认public内的文件放在项目根目录
+                //         responseType: 'json'
+                //     }
+                //     ).then(
+                //         (response)=> {
+                //             console.log('-----------');
+                //             console.log(response);
+                //             this.keyword = response.data.name;
+                //         }
+                //     ).catch(
+                //         (err)=>{
+                //             console.log(err)
+                //         }
+                //     );
+
+                this.$API.reqCategoryList()
             }
         }
-    }
+     }
 </script>
 
 <style scoped>
