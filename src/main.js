@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from '@/App' //@ 是一个别名 代表src路径
 
 import router from '@/router'
+import store from '@/store' //只是简写
+// import { default as store } from '@/store' //全写
 
 import TypeNav from '@/components/TypeNav'
 
@@ -26,5 +28,6 @@ new Vue({
         Vue.prototype.$API = API
     },
     router,
+    store,
     render: h => h(App),
 }).$mount('#app')

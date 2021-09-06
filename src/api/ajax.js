@@ -30,8 +30,6 @@ service.interceptors.request.use(
         // 这个请求报文，最后一定要返回去，因为还要继续往下走
         //在这里我们可以添加额外的功能，也可以给请求头添加需要的数据
         NProgress.start(); //开启进度条
-
-
         return config
     },
     // 请求拦截器当中失败的回调一般不写，因为失败了，也就没有下文了

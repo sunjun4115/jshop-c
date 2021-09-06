@@ -31,7 +31,7 @@
             <div class="bottom">
                 <h1 class="logoArea">
                     <router-link to="/home"  class="logo" title="尚品汇">
-                        <img src="./images/logo.png" alt="">
+                        <!-- <img src="./images/logo.png" alt=""> -->
                     </router-link>
                     <!-- <a class="logo" title="尚品汇" href="###" target="_blank">
                         <img src="./images/logo.png" alt="">

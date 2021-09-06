@@ -28,7 +28,7 @@ import request from './ajax'
 //无参
 export const reqCategoryList = () => {
     return request({
-        url: '/t1.json',
+        url: '/categoryList.json',
         method: 'get'
     })
 }

@@ -1,0 +1,36 @@
+{
+    "code": 200,
+    "message": "success",
+    "ok": true,
+    "data": [{
+        "categoryChild": [{
+            "categoryChild": [{
+                "categoryName": "电子书b",
+                "categoryId": "1"
+            }, {
+                "categoryName": "电子书b2",
+                "categoryId": "b2"
+            }, {
+                "categoryName": "电子书b3",
+                "categoryId": "b3"
+            }],
+            "categoryName": "电子书a",
+            "categoryId": "1"
+        }, {
+            "categoryChild": [{
+                "categoryName": "电子书e",
+                "categoryId": "e1"
+            }, {
+                "categoryName": "电子书e2",
+                "categoryId": "e2"
+            }, {
+                "categoryName": "电子书e3",
+                "categoryId": "e3"
+            }],
+            "categoryName": "电子书c",
+            "categoryId": "c1"
+        }],
+        "categoryName": "图书 音响 电子书刊",
+        "categoryId": "1"
+    }]
+}
