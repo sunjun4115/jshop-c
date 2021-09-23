@@ -13,7 +13,7 @@ import 'nprogress/nprogress.css'
 //axios.create()创建一个新的和axios具有相同功能的一个实例
 const service = axios.create({
     //配置基础路径和超时限制
-    baseURL: '/api', //设置，当前项目当中所有接口路径的公共路径部分，基础路径
+    baseURL: '/mock', //设置，当前项目当中所有接口路径的公共路径部分，基础路径
     timeout: 20000, //当ajax请求超过设置的这个事件就会报错
 });
 

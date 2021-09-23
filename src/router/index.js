@@ -83,6 +83,7 @@ export default new VueRouter({
         // props:true, //会默认的把传递过来的params参数，额外的映射为组件当中的属性去操作
         //props: { 'username': 'sunjun' }   //传递一个对象，传递的是额外你需要的静态数据,不需要就不用
         //使用函数 route参数为一个mini route对象，含有route对象中部分数据
+        //
         props: (route) => {
             return { keyword: route.params.keyword, keyword1: route.query.keyword1, 'username': 'sunjun' }
         }

@@ -31,7 +31,7 @@
             <div class="bottom">
                 <h1 class="logoArea">
                     <router-link to="/home"  class="logo" title="尚品汇">
-                        <!-- <img src="./images/logo.png" alt=""> -->
+                        <img src="./images/logo.png" alt="">
                     </router-link>
                     <!-- <a class="logo" title="尚品汇" href="###" target="_blank">
                         <img src="./images/logo.png" alt="">
@@ -75,11 +75,11 @@
                 // 2、模板字符串
                 // this.$router.push(`/search/${this.keyword}?keyword1=${this.keyword.toUpperCase()}`)
                 // 3、对象写法（重点）
-                this.$router.push({
-                  name: "search",
-                  params: { keyword: this.keyword || undefined },
-                  query: { keyword1: this.keyword.toUpperCase() },
-                });
+                // this.$router.push({
+                //   name: "search",
+                //   params: { keyword: this.keyword || undefined },
+                //   query: { keyword1: this.keyword.toUpperCase() },
+                // });
 
                 // 面试1
                 //指定params参数时可不可以用path和params配置的组合?（对象写法）
@@ -103,24 +103,24 @@
                 // 1、不传params参数
                 // 2、首先必须在params参数可传可不传的前提下，当传递的参数是空串的时候，传递成undefined,就不出问题
 
-                // let location = {
-                //     name: "search",
-                //     params: { keyword: this.keyword || undefined },
-                //     // query: { keyword1: this.keyword.toUpperCase() },
-                // };
+                let location = {
+                    name: "search",
+                    params: { keyword: this.keyword || undefined },
+                    // query: { keyword1: this.keyword.toUpperCase() },
+                };
 
                 //跳转之前一样的，也得判断之前过来有没有带query参数，有的话这次一起带上（合并参数）
-                // if (this.$route.query) {
-                //     location.query = this.$route.query;
-                // }
+                if (this.$route.query) {
+                    location.query = this.$route.query;
+                }
 
                 //如果是从home页跳search页，就push
                 //如果是search页跳search页，就replace
-                // if (this.$route.path !== "/home") {
-                //     this.$router.replace(location);
-                // } else {
-                //     this.$router.push(location);
-                // }
+                if (this.$route.path !== "/home") {
+                    this.$router.replace(location);
+                } else {
+                    this.$router.push(location);
+                }
 
                 // 面试问题5: 路由组件能不能传递props数据?
                 // 可以: 可以将query或且params参数映射/转换成props传递给路由组件对象

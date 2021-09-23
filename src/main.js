@@ -7,6 +7,10 @@ import router from '@/router'
 import store from '@/store' //只是简写
 // import { default as store } from '@/store' //全写
 
+import 'swiper/css/swiper.css' //引入swiper的css
+
+import '@/mock/mockServer'
+
 import TypeNav from '@/components/TypeNav'
 
 import * as API from '@/api' //直接获取接口请求函数文件暴露出来的对象

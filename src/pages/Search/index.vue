@@ -15,7 +15,7 @@
         name:'Serach',
         props:["keyword",'username','keyword1'],
         mounted(){
-            console.log('this.route',this.route);
+            console.log('this.route',this.router);
         }
     }
 </script>

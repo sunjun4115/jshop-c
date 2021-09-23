@@ -3,34 +3,79 @@
     "message": "success",
     "ok": true,
     "data": [{
-        "categoryChild": [{
             "categoryChild": [{
-                "categoryName": "电子书b",
+                "categoryChild": [{
+                    "categoryName": "电子书b",
+                    "categoryId": "1"
+                }, {
+                    "categoryName": "电子书b2",
+                    "categoryId": "b2"
+                }, {
+                    "categoryName": "电子书b3",
+                    "categoryId": "b3"
+                }],
+                "categoryName": "电子书a",
                 "categoryId": "1"
             }, {
-                "categoryName": "电子书b2",
-                "categoryId": "b2"
+                "categoryChild": [{
+                    "categoryName": "电子书e",
+                    "categoryId": "e1"
+                }, {
+                    "categoryName": "电子书e2",
+                    "categoryId": "e2"
+                }, {
+                    "categoryName": "电子书e3",
+                    "categoryId": "e3"
+                }],
+                "categoryName": "电子书c",
+                "categoryId": "c1"
             }, {
-                "categoryName": "电子书b3",
-                "categoryId": "b3"
+                "categoryChild": [{
+                    "categoryName": "电子书h",
+                    "categoryId": "h1"
+                }, {
+                    "categoryName": "电子书h2",
+                    "categoryId": "h2"
+                }, {
+                    "categoryName": "电子书h3",
+                    "categoryId": "h3"
+                }],
+                "categoryName": "电子书h",
+                "categoryId": "h1"
             }],
-            "categoryName": "电子书a",
+            "categoryName": "图书、音响、电子书刊",
             "categoryId": "1"
-        }, {
+        },
+        {
             "categoryChild": [{
-                "categoryName": "电子书e",
-                "categoryId": "e1"
+                "categoryChild": [{
+                    "categoryName": "手机b",
+                    "categoryId": "1"
+                }, {
+                    "categoryName": "手机b2",
+                    "categoryId": "b2"
+                }, {
+                    "categoryName": "手机b3",
+                    "categoryId": "b3"
+                }],
+                "categoryName": "手机a",
+                "categoryId": "1"
             }, {
-                "categoryName": "电子书e2",
-                "categoryId": "e2"
-            }, {
-                "categoryName": "电子书e3",
-                "categoryId": "e3"
+                "categoryChild": [{
+                    "categoryName": "充值e",
+                    "categoryId": "2e1"
+                }, {
+                    "categoryName": "充值e2",
+                    "categoryId": "2e2"
+                }, {
+                    "categoryName": "充值e3",
+                    "categoryId": "2e3"
+                }],
+                "categoryName": "充值c",
+                "categoryId": "2c1"
             }],
-            "categoryName": "电子书c",
-            "categoryId": "c1"
-        }],
-        "categoryName": "图书 音响 电子书刊",
-        "categoryId": "1"
-    }]
+            "categoryName": "手机、数码、充值",
+            "categoryId": "2"
+        }
+    ]
 }
